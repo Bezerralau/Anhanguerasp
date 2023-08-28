@@ -243,6 +243,30 @@ h1 {
   margin-left: 150px;
 }
 
+@media (max-width: 400px) {
+  h1 {
+    font-size: 34px;
+    padding-left: 20px;
+  }
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    flex-basis: 100%;
+  }
+
+  .column img.esquerda {
+    max-width: 149px;
+    height: 102px;
+    margin-bottom: 10px;
+  }
+
+  .column h2 {
+    margin-top: 0;
+  }
+}
+
 .cursos-lista {
   background-image: url("./img/fundo-cursos.png");
   background-size: cover;
