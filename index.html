@@ -4,15 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anhanguera</title>
+  <title>Anhanguera SP</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://use.typekit.net/wbe8kkj.css">
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      const menuIcon = document.querySelector(".menu-icon");
+      const headerLinks = document.querySelector(".header-links");
+
+      menuIcon.addEventListener("click", () => {
+        headerLinks.classList.toggle("show");
+      });
+
       const carouselInner = document.querySelector(".carousel-inner");
       const prevButton = document.querySelector(".prev-button");
       const nextButton = document.querySelector(".next-button");
       let currentSlide = 0;
+      const totalSlides = 5;
 
       function goToSlide(slideIndex) {
         currentSlide = slideIndex;
@@ -20,21 +28,22 @@
       }
 
       prevButton.addEventListener("click", () => {
-        currentSlide = (currentSlide - 1 + 4) % 4;
+        currentSlide = (currentSlide - 1 + 5) % 5;
         goToSlide(currentSlide);
       });
 
       nextButton.addEventListener("click", () => {
-        currentSlide = (currentSlide + 1) % 4;
+        currentSlide = (currentSlide + 1) % 5;
         goToSlide(currentSlide);
       });
 
       setInterval(() => {
-        currentSlide = (currentSlide + 1) % 4;
+        currentSlide = (currentSlide + 1) % 5;
         goToSlide(currentSlide);
-      }, 3000); // Troca de imagem a cada 3 segundos
+      }, 5000); // Troca de imagem a cada 3 segundos
     });
   </script>
+
 </head>
 
 <body>
@@ -44,12 +53,15 @@
   </div>
   <div class="header">
     <a href="./index.html"><img class="logo" src="./img/logo.svg" alt="logo Anhanguera" width="323" height="60"></a>
+    <div class="menu-icon">&#9776;</div>
+
     <div class="header-links">
       <a href="/index.html"><img src="./img/icone casa.png" alt="Voltar para home" width="40" height="32px"></a>
       <a href="./graduacao">Graduação</a>
       <a href="./eja-supletivo">EJA Supletivo</a>
       <a href="./pos-mba">Pós e MBA</a>
     </div>
+  </div>
   </div>
   <div class="carousel">
     <div class="carousel-controls">
@@ -58,19 +70,24 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-slide">
-        <img src="./img/imagem1.png" alt="Imagem 1">
+        <img src="./img/COMEÇE SUA FACUL POR APENAS 59.png" alt="Imagem 1">
       </div>
       <div class="carousel-slide">
-        <img src="./img/imagem2.png" alt="Imagem 2">
+        <img src="./img/CURSOS NAS ÁREAS DA SAÚDE E ENGENHARIA.png" alt="Imagem 2">
       </div>
       <div class="carousel-slide">
-        <img src="./img/imagem3.png" alt="Imagem 3">
+        <img src="./img/ESTUDE FORMA FLEXIVEL_.png" alt="Imagem 3">
       </div>
       <div class="carousel-slide">
-        <img src="./img/imagem4.png" alt="Imagem 4">
+        <img src="./img/EMPRESAS PARCEIRAS.png" alt="Imagem 4">
+      </div>
+      <div class="carousel-slide">
+        <img src="./img/EJA E ANHANGUERA DA O PLAY_.png" alt="Imagem 5">
       </div>
     </div>
   </div>
+
+
 
   <section class="section">
     <h1>Especialidades!</h1>
@@ -105,6 +122,33 @@
       </div>
     </div>
   </section>
+
+  <article class="cursos-lista">
+    <h1>Conheça alguns dos nossos cursos</h1>
+    <ul>
+      <li>
+        <a href="./">
+          <img src="./img/fisioterapia.png" alt="Curso fisioterapia">
+          <h2>Fisioterapia</h2>
+          <span>R$59,00</span>
+        </a>
+      </li>
+      <li>
+        <a href="./">
+          <img src="./img/biomed.png" alt="biomed">
+          <h2>Biomedicina</h2>
+          <span>R$59,00</span>
+        </a>
+      </li>
+      <li>
+        <a href="./">
+          <img src="./img/engcivil.png" alt="engenharia civil">
+          <h2>Engenharia Civil</h2>
+          <span>R$59,00</span>
+        </a>
+      </li>
+    </ul>
+  </article>
 </body>
 
 </html>
