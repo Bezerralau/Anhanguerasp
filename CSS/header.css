@@ -15,7 +15,7 @@
   font-size: 24px;
   text-decoration: none;
   color: #a8a8a8;
-  font-family: 'eigerdals', sans-serif;
+  font-family: "eigerdals", sans-serif;
   font-weight: 700;
   font-style: italic;
 }
@@ -30,7 +30,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #6c7a86;
 }
 
@@ -133,11 +133,14 @@ body {
 
 @media (max-width: 1500px) {
   .header-links {
-    gap: 1.25rem;
-    flex-wrap: wrap;
+    display: none;
   }
-  .header-links > * {
-    flex-basis: calc(50% - 1.25rem);
+  #menu {
+    display: block;
+  }
+  .logo {
+    margin-bottom: 0; /* Remova a margem inferior no logo */
+    margin-left: 350px;
   }
 }
 
@@ -152,6 +155,7 @@ body {
     margin-bottom: 0; /* Remova a margem inferior no logo */
     width: 136px;
     height: 25px;
+    margin-left: 0;
   }
 
   .div-logo {
