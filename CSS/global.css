@@ -3,6 +3,12 @@ body {
   padding: 0;
 }
 
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
 h1 {
   color: #ff7323;
   text-transform: uppercase;
@@ -18,12 +24,13 @@ h1 {
 
 .catalogo img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .catalogo {
   position: relative;
   text-align: center;
+  margin: 0;
 }
 
 .botoes-catalogo {
