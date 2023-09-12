@@ -7,6 +7,8 @@
   <title>Anhanguera SP</title>
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="stylesheet" href="https://use.typekit.net/wbe8kkj.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <script type="text/javascript" src="./JS/script.js"></script>
 
 </head>
@@ -18,14 +20,14 @@
   </div>
   <div class="header">
     <div class="div-logo">
-      <a href="./index.html"><img class="logo" src="./img/logo.svg" alt="logo Anhanguera" width="323" height="60"></a>
+      <a href="./index.html"><img class="logo" src="./img/logo.svg" alt="logo Anhanguera" width="230" height="43"></a>
     </div>
 
     <div class="header-links">
-      <a href="/index.html"><img src="./img/icone casa.png" alt="Voltar para home" width="40" height="32px"></a>
+      <a href="/index.html"><img src="./img/icone casa.png" alt="Voltar para home" width="20" height="16"></a>
       <a href="./graduacao">Graduação</a>
-      <a href="./eja-supletivo">EJA Supletivo</a>
-      <a href="./pos-mba">Pós e MBA</a>
+      <!-- <a href="./eja-supletivo">EJA Supletivo</a> -->
+      <a href="./pos-mba">Pós-Graduação</a>
       <a href="./polos">Polos</a>
       <a href="./Laboratorios">Laboratórios</a>
     </div>
@@ -52,6 +54,7 @@
   </div>
 
   <div class="carousel">
+
     <div class="carousel-inner">
       <div class="carousel-slide">
         <img src="./img/COMEÇE SUA FACUL POR APENAS 59.png" alt="Imagem 1">
@@ -69,6 +72,8 @@
         <img src="./img/EJA E ANHANGUERA DA O PLAY_.png" alt="Imagem 5">
       </div>
     </div>
+    <button id="prevButton" class="carousel-button"><i class="fas fa-chevron-left"></i></button>
+    <button id="nextButton" class="carousel-button"><i class="fas fa-chevron-right"></i></button>
   </div>
 
 
@@ -90,7 +95,14 @@
         </div>
       </div>
       <div class="item">
-        <img class="imagem-especialidade" src="./img/cracha.png" alt="Imagem Esquerda 3">
+        <img class="imagem-especialidade" src="./img/carteira-de-trabalho.png" alt="Imagem Esquerda 3">
+        <div class="texto">
+          <h2>Cursos Técnicos</h2>
+          <p>Nossos cursos técnicos são a porta de entrada para uma carreira de sucesso. Projetados sob medida para preparar você para o mercado de trabalho em tempo recorde, nossos programas oferecem um mergulho profundo em sua área de interesse. Se você está buscando uma maneira eficaz de adquirir habilidades práticas e conquistar o emprego dos seus sonhos, nossos cursos técnicos são a escolha certa.</p>
+        </div>
+      </div>
+      <div class="item">
+        <img class="imagem-especialidade" src="./img/cracha.png" alt="Imagem Esquerda 4">
         <div class="texto">
           <h2>Cursos Livres</h2>
           <p>Nossos cursos livres oferecem uma oportunidade única para aprender novas habilidades, aprimorar sua carreira ou se aprofundar em um hobby. Com conteúdo prático e atualizado, você poderá escolher entre uma variedade de cursos em diversas áreas, desde marketing digital até culinária. Nossos cursos são ministrados por profissionais experientes e oferecem flexibilidade para você estudar no seu próprio ritmo. Com nossos cursos livres, você pode adquirir conhecimentos valiosos para aprimorar sua vida pessoal ou profissional.</p>
@@ -100,33 +112,31 @@
   </section>
 
   <article class="cursos-lista">
-    <div class="margem-titulo">
-      <h1>Conheça alguns dos nossos cursos</h1>
-      <ul>
-        <li>
-          <a href="#formulario">
-            <img src="./img/fisioterapia.png" alt="Curso fisioterapia">
-            <h2>Fisioterapia</h2>
-            <span>R$59,00*</span>
-          </a>
-        </li>
-        <li>
-          <a href="#formulario">
-            <img src="./img/biomed.png" alt="biomed">
-            <h2>Biomedicina</h2>
-            <span>R$59,00*</span>
-          </a>
-        </li>
-        <li>
-          <a href="#formulario">
-            <img src="./img/engcivil.png" alt="engenharia civil">
-            <h2>Engenharia Civil</h2>
-            <span>R$59,00*</span>
-          </a>
-        </li>
-      </ul>
-      <p class="condicoes">*consulte condições</p>
-    </div>
+    <h1 class="container-cursos">Conheça alguns dos nossos cursos</h1>
+    <ul>
+      <li>
+        <a href="#formulario">
+          <img src="./img/fisioterapia.png" alt="Curso fisioterapia">
+          <h2>Fisioterapia</h2>
+          <span>R$59,00*</span>
+        </a>
+      </li>
+      <li>
+        <a href="#formulario">
+          <img src="./img/biomed.png" alt="biomed">
+          <h2>Biomedicina</h2>
+          <span>R$59,00*</span>
+        </a>
+      </li>
+      <li>
+        <a href="#formulario">
+          <img src="./img/engcivil.png" alt="engenharia civil">
+          <h2>Engenharia Civil</h2>
+          <span>R$59,00*</span>
+        </a>
+      </li>
+    </ul>
+    <p class="condicoes">*consulte condições</p>
   </article>
 
   <article class="tecnologia-bg">
@@ -222,6 +232,16 @@
               <option value="100% EAD">100% EAD</option>
               <option value="Presencial">Presencial</option>
               <option value="Semi-Presencial">Semi-Presencial</option>
+            </select>
+          </div>
+          <div class="col-2">
+            <label for="tipo de curso">Tipo de Curso</label>
+            <select class="form-select" name="tipo" type="select" id="tipo de curso" required>
+              <option value="" disabled selected>Escolha o Tipo de Curso</option>
+              <option value="Graduação">Graduação</option>
+              <option value="Pós-graduação">Pós-graduação</option>
+              <option value="Cursos Técnicos">Cursos técnicos</option>
+              <option value="Cursos Livres">Cursos Livres</option>
             </select>
           </div>
           <div class="col-2">
